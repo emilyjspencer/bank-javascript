@@ -3,6 +3,10 @@ function BankAccount(){
 }
 
 BankAccount.prototype.withdraw = function(amount) {
+  if(this.balance < amount) {
+    throw new Error("Error: insufficient funds to withdraw")
+
+  };
   this.balance -= amount
 };
 
