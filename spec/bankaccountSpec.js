@@ -30,5 +30,12 @@ describe('BankAccount', function() {
     expect(bankaccount.checkBalance()).toEqual(2020)
   });
 
+  it('the account holder can print their bank statement', function(){
+    bankaccount.deposit(100)
+    bankaccount.deposit(500)
+    bankaccount.withdraw(200)
+    expect(bankaccount.printStatement()).toEqual('date || credit || debit || balance' + '\n' + '27/02/2020 || 100.00||   || 2100.00' + '\n' + '27/02/2020 || 500.00||   || 2600.00' + '\n' + '27/02/2020 ||   || 200.00  || 2400.00')   
+  });
+
   
 });
