@@ -13,4 +13,9 @@ describe('BankAccount', function() {
     bankaccount.withdraw(20)
     expect(bankaccount.balance).toEqual(1980)
   });
+
+  it('the account holder can deposit money', function() {
+    bankaccount.deposit(50)
+    expect(bankaccount.balance).toEqual(2050)
+  });
 });
