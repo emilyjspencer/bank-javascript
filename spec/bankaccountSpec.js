@@ -24,4 +24,11 @@ describe('BankAccount', function() {
     bankaccount.deposit(50)
     expect(bankaccount.balance).toEqual(2050)
   });
+
+  it('the account holder can check their balance', function() {
+    bankaccount.deposit(20)
+    expect(bankaccount.checkBalance()).toEqual(2020)
+  });
+
+  
 });
